@@ -41,7 +41,7 @@ data "aws_ami" "app" {
 data "aws_vpc" "selected" {
   filter {
     name   = "tag:Name"
-    values = ["vpc-${var.project}-${var.environment}"]
+    values = ["vpc-${var.project}-${var.environment}-${var.ver}"]
   }
 }
 ## サブネットの取り込み
