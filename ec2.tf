@@ -30,7 +30,7 @@ resource "aws_instance" "app_server_1a" {
   iam_instance_profile = data.aws_iam_instance_profile.app_instance_profile.name
 
   # スクリプトを流し込む
-  user_data = file("./scripts/start-service.sh")
+  # user_data = file("./scripts/start-service.sh")
 
   tags = {
     Name    = "${var.project}-${var.environment}-app-server-1a"
